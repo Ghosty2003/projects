@@ -2,7 +2,12 @@
   "name": "chain-reorg",
   "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/index.js",
+    "test": "npm run build && node --test dist/test/"
+  },
   "devDependencies": {
     "@types/node": "^26.6.4",
     "typescript": "^7.0.2"
